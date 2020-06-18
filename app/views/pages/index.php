@@ -1,6 +1,3 @@
-<h1><?php echo $data['title']; ?></h1>
-<?php echo APPROOT;
-echo "\r\n";
-echo URLROOT;
-echo "\r\n";
-echo SITENAME;
+<?php require APPROOT . '/views/inc/header.php';?>
+  <h1><?php echo $data['title']; ?></h1>
+<?php require APPROOT . '/views/inc/footer.php';?>
