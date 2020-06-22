@@ -8,10 +8,10 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo URLROOT; ?>">Home</a>
+            <a class="nav-link <?php if (strlen($_SERVER['REQUEST_URI']) == 12 || strlen($_SERVER['REQUEST_URI']) == 17) {echo 'active';}?>" href="<?php echo URLROOT; ?>">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/about">About</a>
+            <a class="nav-link <?php active('/pages/about');?>" href="<?php echo URLROOT; ?>/pages/about">About</a>
           </li>
         </ul>
 
@@ -25,10 +25,10 @@
             </li>
           <?php else: ?>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo URLROOT; ?>/users/register">Register</a>
+              <a class="nav-link <?php active('/users/register');?>" href="<?php echo URLROOT; ?>/users/register">Register</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo URLROOT; ?>/users/login">Login</a>
+              <a class="nav-link <?php active('/users/login');?>" href="<?php echo URLROOT; ?>/users/login">Login</a>
             </li>
           <?php endif;?>
         </ul>
